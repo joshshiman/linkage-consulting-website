@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #00203f; /* Darker navy blue */
+    background-color: #003366; /* Color from your logo */
     color: white;
     padding: 1rem 0;
     position: fixed;
@@ -13,7 +13,7 @@ header {
     top: 0;
     left: 0;
     z-index: 10;
-    transition: transform 0.5s ease-in-out; /* For slide in and out */
+    transition: transform 0.5s ease-in-out;
 }
 
 .header-container {
@@ -25,7 +25,7 @@ header {
 
 .logo-title h1 {
     margin: 0;
-    font-size: 1.5rem; /* Smaller font size */
+    font-size: 1.5rem;
 }
 
 .logo-title h1 a {
@@ -51,7 +51,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #cc99ff; /* Lighter high contrast purple */
+    color: #ffcc00; /* Highlight color from your logo */
 }
 
 nav ul li a::after {
@@ -62,7 +62,7 @@ nav ul li a::after {
     height: 2px;
     bottom: -2px;
     left: 0;
-    background-color: #cc99ff;
+    background-color: #ffcc00;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -73,7 +73,7 @@ nav ul li a:hover::after {
 }
 
 main {
-    padding-top: 6rem; /* Space for the fixed header */
+    padding-top: 6rem;
 }
 
 section {
@@ -82,7 +82,7 @@ section {
 }
 
 #hero {
-    background-image: url('images/background.jpg'); /* Replace with your background image */
+    background-image: url('images/background.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -93,7 +93,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: -6rem; /* Pull up the hero section to be flush with the top */
+    margin-top: -6rem;
 }
 
 #hero::before {
@@ -103,8 +103,8 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 20, 40, 0.8); /* Darker navy overlay */
-    backdrop-filter: blur(5px); /* Blurred overlay */
+    background: rgba(0, 51, 102, 0.8); /* Darker overlay */
+    backdrop-filter: blur(5px);
 }
 
 .hero-content {
@@ -123,7 +123,7 @@ section {
 
 #logos {
     text-align: center;
-    padding-top: 2rem; /* Adjust the padding as needed */
+    padding-top: 2rem;
 }
 
 .logo-bar {
@@ -138,7 +138,7 @@ section {
 
 .logo-track {
     display: flex;
-    width: calc(200%); /* To allow smooth continuous scroll */
+    width: calc(200%);
     animation: scroll 20s linear infinite;
 }
 
@@ -209,7 +209,7 @@ section {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #00203f;
+    background-color: #003366;
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -217,11 +217,11 @@ section {
 }
 
 .card a.button:hover {
-    background-color: #cc99ff;
+    background-color: #ffcc00;
 }
 
 footer {
-    background-color: #001a33; /* Darker navy blue */
+    background-color: #001a33;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -290,9 +290,10 @@ header.hide {
 }
 
 .team-section {
-    background-color: #00203f; /* Darker navy blue */
+    background-color: #003366;
     color: white;
     padding: 2rem;
+    text-align: center;
 }
 
 .team-cards {
@@ -303,7 +304,7 @@ header.hide {
 
 .team-card {
     background-color: white;
-    color: #00203f;
+    color: #003366;
     border-radius: 8px;
     width: 200px;
     margin: 1rem;
@@ -323,4 +324,19 @@ header.hide {
 
 .team-card p {
     margin: 0.5rem 0;
+}
+
+.page-title {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.page-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-title p {
+    font-size: 1.2rem;
+    color: #666;
 }
