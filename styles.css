@@ -13,7 +13,7 @@ header {
     top: 0;
     left: 0;
     z-index: 10;
-    transition: opacity 0.5s ease-in-out; /* For fade in and out */
+    transition: transform 0.5s ease-in-out; /* For slide in and out */
 }
 
 .header-container {
@@ -82,7 +82,7 @@ section {
 }
 
 #hero {
-    background-image: url('background.jpg'); /* Replace with your background image */
+    background-image: url('images/background.jpg'); /* Replace with your background image */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -205,6 +205,21 @@ section {
     color: #555;
 }
 
+.card a.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #00203f;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.25s ease-out;
+}
+
+.card a.button:hover {
+    background-color: #cc99ff;
+}
+
 footer {
     background-color: #001a33; /* Darker navy blue */
     color: white;
@@ -229,4 +244,12 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+}
+
+header.show {
+    transform: translateY(0);
+}
+
+header.hide {
+    transform: translateY(-100%);
 }
