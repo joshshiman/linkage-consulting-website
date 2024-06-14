@@ -329,8 +329,13 @@ header.hide {
     color: black; /* Changed to black */
 }
 
+.team-card .team-role {
+    margin-top: 0.5rem;
+    color: gray; /* Changed to gray */
+}
+
 .team-card p {
-    margin: 0.5rem 0;
+    margin: 0.3rem 0; /* Reduced margin for closer spacing */
     color: black; /* Changed to black */
 }
 
@@ -347,4 +352,56 @@ header.hide {
 .page-title p {
     font-size: 1.2rem;
     color: #666;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.contact-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.contact-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.contact-card a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #001a33;
+    color: white;
+    padding: 1rem;
+    text-align: center;
 }
