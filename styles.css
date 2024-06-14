@@ -320,10 +320,12 @@ header.hide {
 
 .team-card h3 {
     margin-top: 1rem;
+    color: black; /* Changed to black */
 }
 
 .team-card p {
     margin: 0.5rem 0;
+    color: black; /* Changed to black */
 }
 
 .page-title {
