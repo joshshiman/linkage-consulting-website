@@ -289,6 +289,12 @@ header.hide {
     border-radius: 8px;
 }
 
+.image-caption {
+    text-align: center;
+    color: gray;
+    font-size: 0.9rem;
+}
+
 .team-section {
     background-color: #003366;
     color: white;
@@ -299,7 +305,7 @@ header.hide {
 .team-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .team-card {
