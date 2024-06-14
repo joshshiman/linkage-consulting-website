@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #00203f; /* Darker navy blue */
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: opacity 0.5s ease-in-out; /* For fade in and out */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 1.5rem; /* Smaller font size */
+}
+
+.logo-title h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #cc99ff; /* Lighter high contrast purple */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #cc99ff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+main {
+    padding-top: 6rem; /* Space for the fixed header */
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+#hero {
+    background-image: url('background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -6rem; /* Pull up the hero section to be flush with the top */
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 20, 40, 0.8); /* Darker navy overlay */
+    backdrop-filter: blur(5px); /* Blurred overlay */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+}
+
+#logos {
+    text-align: center;
+    padding-top: 2rem; /* Adjust the padding as needed */
+}
+
+.logo-bar {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-track {
+    display: flex;
+    width: calc(200%); /* To allow smooth continuous scroll */
+    animation: scroll 20s linear infinite;
+}
+
+.logo-track img {
+    height: 100px;
+    margin: 0 1rem;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+#action {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+#action h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#action p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+footer {
+    background-color: #001a33; /* Darker navy blue */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #hero {
+        height: 50vh;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
