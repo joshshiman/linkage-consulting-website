@@ -6,6 +6,7 @@
     <title>About - Linkage Consulting</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header id="header">
@@ -14,7 +15,18 @@
                 <h1><a href="index.html">Linkage Consulting</a></h1>
             </div>
             <nav>
-                <ul>
+                <div class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ul class="desktop-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <ul class="mobile-menu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -24,6 +36,13 @@
         </div>
     </header>
     <main>
+        <section class="title-section">
+            <img src="images/headers/toronto-skyline-mural.jpg" alt="Header Image">
+            <div class="title-content">
+                <h1>About Linkage Consulting</h1>
+                <p>Linkage Consulting is a pro-bono consulting club run by students with real work experience...</p>
+            </div>
+        </section>
         <section class="page-title">
             <h1>About Linkage Consulting</h1>
             <p>Linkage Consulting is a pro-bono consulting club run by students with real work experience...</p>
