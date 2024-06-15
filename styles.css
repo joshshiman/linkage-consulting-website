@@ -121,6 +121,23 @@ section {
     font-size: 1.2rem;
 }
 
+#hero .button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+}
+
+#hero .button:hover {
+    background-color: #ffcc00;
+    color: #003366;
+}
+
 #logos {
     text-align: center;
     padding-top: 2rem;
