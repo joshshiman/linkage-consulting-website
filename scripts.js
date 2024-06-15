@@ -1,16 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
     const header = document.getElementById('header');
-    const heroSection = document.getElementById('hero');
     let lastScroll = 0;
 
     function checkScroll() {
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
         const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (currentScroll > lastScroll && heroBottom <= 0) {
+        if (currentScroll > lastScroll) {
             header.classList.add('hide');
             header.classList.remove('show');
-        } else if (currentScroll < lastScroll || heroBottom > 0) {
+        } else {
             header.classList.add('show');
             header.classList.remove('hide');
         }
@@ -19,4 +17,12 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     window.addEventListener('scroll', checkScroll);
+
+    // Hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul.mobile-menu');
+
+    hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('show');
+    });
 });

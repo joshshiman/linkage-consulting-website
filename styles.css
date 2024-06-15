@@ -1,18 +1,17 @@
+/* Reset styles for consistency */
 html, body {
-    overflow-x: hidden;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
+/* Header styles */
 header {
-    background-color: #003366; /* Color from your logo */
+    background-color: #003366; /* Solid background color */
     color: white;
     padding: 1rem 0;
-    position: fixed;
+    position: fixed; /* Fixed position */
     width: 100%;
     top: 0;
     left: 0;
@@ -37,11 +36,13 @@ header {
     text-decoration: none;
 }
 
+/* Desktop menu styles */
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    display: flex; /* Display as a row */
+    flex-direction: row; /* Ensure row layout for desktop */
 }
 
 nav ul li {
@@ -76,8 +77,98 @@ nav ul li a:hover::after {
     transform-origin: bottom left;
 }
 
+/* Mobile menu styles */
+nav ul.mobile-menu {
+    display: none;
+    flex-direction: column;
+}
+
+nav ul.mobile-menu.show {
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #003366;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 9;
+}
+
+nav ul.mobile-menu li {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger icon on mobile */
+    }
+
+    nav ul {
+        display: none; /* Hide the full menu on mobile */
+    }
+
+    nav ul.mobile-menu.show {
+        display: flex; /* Show the mobile menu when toggled */
+    }
+}
+
+/* Title section styles */
+.title-section {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -6rem; /* Align with header */
+    padding-top: 6rem; /* Offset for fixed header */
+}
+
+.title-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.title-content {
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.title-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.title-content p {
+    font-size: 1.2rem;
+}
+
+/* Main content styles */
 main {
-    padding-top: 6rem;
+    padding-top: 6rem; /* Ensure content doesn't overlap with header */
 }
 
 section {
@@ -85,6 +176,7 @@ section {
     padding: 2rem;
 }
 
+/* Hero section styles */
 #hero {
     background-image: url('images/background.jpg');
     background-size: cover;
@@ -97,7 +189,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: -6rem;
+    margin-top: -6rem; /* Align with header */
 }
 
 #hero::before {
@@ -142,6 +234,7 @@ section {
     color: #003366;
 }
 
+/* Logos section styles */
 #logos {
     text-align: center;
     padding-top: 2rem;
@@ -177,6 +270,7 @@ section {
     }
 }
 
+/* Action section styles */
 #action {
     text-align: center;
     padding: 2rem;
@@ -241,6 +335,7 @@ section {
     background-color: #ffcc00;
 }
 
+/* Footer styles */
 footer {
     background-color: #001a33;
     color: white;
@@ -281,6 +376,7 @@ footer {
     }
 }
 
+/* Header visibility toggling */
 header.show {
     transform: translateY(0);
 }
@@ -289,6 +385,7 @@ header.hide {
     transform: translateY(-100%);
 }
 
+/* About section styles */
 #about .about-container {
     display: flex;
     justify-content: space-between;
@@ -316,6 +413,7 @@ header.hide {
     font-size: 0.9rem;
 }
 
+/* Team section styles */
 .team-section {
     background-color: #003366;
     color: white;
@@ -347,82 +445,15 @@ header.hide {
 
 .team-card h3 {
     margin-top: 1rem;
-    color: black; /* Changed to black */
+    color: black;
 }
 
 .team-card .team-role {
     margin-top: 0.5rem;
-    color: gray; /* Changed to gray */
+    color: gray;
 }
 
 .team-card p {
-    margin: 0.3rem 0; /* Reduced margin for closer spacing */
-    color: black; /* Changed to black */
-}
-
-.page-title {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.page-title h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.page-title p {
-    font-size: 1.2rem;
-    color: #666;
-}
-
-.contact-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.contact-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.contact-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    margin: 1rem;
-    padding: 1rem;
-    text-align: center;
-}
-
-.contact-card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 1rem;
-}
-
-.contact-card p {
-    font-size: 1rem;
-    color: #555;
-}
-
-.contact-card a {
-    color: #003366;
-    text-decoration: none;
-}
-
-.contact-card a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    background-color: #001a33;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+    margin: 0.3rem 0;
+    color: black;
 }
