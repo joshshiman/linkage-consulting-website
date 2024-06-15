@@ -206,6 +206,9 @@ section {
 .hero-content {
     position: relative;
     z-index: 1;
+    max-width: 90%; /* Ensure it doesn't cut off on smaller screens */
+    margin: 0 auto; /* Center the content */
+    padding: 0 1rem; /* Add padding to avoid cutting off */
 }
 
 #hero h2 {
@@ -287,10 +290,15 @@ section {
     margin-bottom: 2rem;
 }
 
-.cards {
+/* Cards section styles */
+.cards-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    margin: 0 auto; /* Center the container */
+    padding: 1rem; /* Add padding to ensure content does not touch the edges */
+    max-width: 1200px; /* Constrain the maximum width */
 }
 
 .card {
@@ -298,10 +306,25 @@ section {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 100%; /* Use full width on mobile */
+    max-width: 300px; /* Constrain the maximum width */
     margin: 1rem;
     padding: 1rem;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%; /* Ensure cards take full width on mobile */
+    }
+}
+
+.cards {
+    display: flex;
+    justify-content: center; /* Center the cards */
+    flex-wrap: wrap;
+    margin: 0 auto; /* Center the container */
+    max-width: 1200px; /* Constrain the maximum width */
 }
 
 .card img {
