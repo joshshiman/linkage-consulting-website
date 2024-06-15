@@ -190,6 +190,7 @@ section {
     align-items: center;
     text-align: center;
     margin-top: -6rem; /* Align with header */
+    overflow: hidden;
 }
 
 #hero::before {
@@ -208,7 +209,8 @@ section {
     z-index: 1;
     max-width: 90%; /* Ensure it doesn't cut off on smaller screens */
     margin: 0 auto; /* Center the content */
-    padding: 0 1rem; /* Add padding to avoid cutting off */
+    padding: 0 2rem; /* Add padding to avoid cutting off */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 #hero h2 {
@@ -237,6 +239,12 @@ section {
     color: #003366;
 }
 
+@media (max-width: 768px) {
+    .hero-content {
+        padding-left: 2rem;
+        padding-right: 2rem; /* Match the left padding */
+    }
+}
 /* Logos section styles */
 #logos {
     text-align: center;
