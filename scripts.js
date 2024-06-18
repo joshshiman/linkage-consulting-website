@@ -1,28 +1,25 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const header = document.getElementById('header');
-    let lastScroll = 0;
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.getElementById("header");
+    const hamburger = document.querySelector(".hamburger");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    let lastScrollTop = 0;
+    const scrollThreshold = 100; // Adjust as needed
 
-    function checkScroll() {
-        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    // Toggle mobile menu
+    hamburger.addEventListener("click", function () {
+        mobileMenu.classList.toggle("show");
+    });
 
-        if (currentScroll > lastScroll) {
-            header.classList.add('hide');
-            header.classList.remove('show');
+    // Show/hide navbar on scroll
+    window.addEventListener("scroll", function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > scrollThreshold) {
+            header.classList.add("hide");
+            header.classList.remove("show");
         } else {
-            header.classList.add('show');
-            header.classList.remove('hide');
+            header.classList.add("show");
+            header.classList.remove("hide");
         }
-
-        lastScroll = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-    }
-
-    window.addEventListener('scroll', checkScroll);
-
-    // Hamburger menu functionality
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('nav ul.mobile-menu');
-
-    hamburger.addEventListener('click', function() {
-        navMenu.classList.toggle('show');
+        lastScrollTop = scrollTop;
     });
 });
