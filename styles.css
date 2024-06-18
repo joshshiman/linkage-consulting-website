@@ -1,7 +1,12 @@
-/* Reset styles for consistency */
-html, body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
     overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
 }
@@ -210,7 +215,6 @@ section {
     max-width: 90%; /* Ensure it doesn't cut off on smaller screens */
     margin: 0 auto; /* Center the content */
     padding: 0 2rem; /* Add padding to avoid cutting off */
-    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
 #hero h2 {
@@ -243,33 +247,36 @@ section {
     .hero-content {
         padding-left: 2rem;
         padding-right: 2rem; /* Match the left padding */
+        padding-top: 6rem; /* Add more top padding for mobile */
+        padding-bottom: 6rem; /* Add bottom padding for mobile */
     }
 }
-/* Logos section styles */
+
 #logos {
+    padding: 2rem 0;
     text-align: center;
-    padding-top: 2rem;
+    background-color: transparent;
 }
 
 .logo-bar {
     overflow: hidden;
-    white-space: nowrap;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
 }
 
 .logo-track {
     display: flex;
-    width: calc(200%);
     animation: scroll 20s linear infinite;
+    width: 100%; /* Ensures that the animation covers the full width */
 }
 
 .logo-track img {
-    height: 100px;
-    margin: 0 1rem;
+    margin: 0 2rem;
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+    padding-top: 2rem;
 }
 
 @keyframes scroll {
