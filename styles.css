@@ -306,13 +306,13 @@ section {
     margin-bottom: 2rem;
 }
 
-/* Cards section styles */
-.cards-container {
+/* Card container and card styles for the services page */
+.card-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start; /* Left justify the cards */
+    align-items: flex-start; /* Align items to the top */
     flex-wrap: wrap;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto; /* Center the container horizontally */
     padding: 1rem; /* Add padding to ensure content does not touch the edges */
     max-width: 1200px; /* Constrain the maximum width */
 }
@@ -425,7 +425,7 @@ header.hide {
 }
 
 /* About section styles */
-#about .about-container {
+.about-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -452,28 +452,61 @@ header.hide {
     font-size: 0.9rem;
 }
 
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-left {
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .about-right img {
+        width: 100%;
+    }
+
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 /* Team section styles */
 .team-section {
-    background-color: #003366;
-    color: white;
+    background-color: #f5f5f5;
+    color: #333;
     padding: 2rem;
     text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.team-section h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
 }
 
 .team-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* Center the team cards */
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .team-card {
     background-color: white;
-    color: #003366;
+    color: #333;
     border-radius: 8px;
     width: 200px;
     margin: 1rem;
     text-align: center;
     padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .team-card img {
@@ -495,4 +528,49 @@ header.hide {
 .team-card p {
     margin: 0.3rem 0;
     color: black;
+}
+
+@media (max-width: 768px) {
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Contact section styles */
+.contact-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.contact-card img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.contact-card a {
+    color: #003366;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
 }

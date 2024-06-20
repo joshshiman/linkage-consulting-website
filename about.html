@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Linkage Consulting</title>
+    <title>About Us - Linkage Consulting</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="scripts.js" defer></script>
@@ -15,7 +15,7 @@
                 <h1><a href="index.html">Linkage Consulting</a></h1>
             </div>
             <nav>
-                <div class="hamburger">
+                <div class="hamburger" id="hamburger">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -26,7 +26,7 @@
                     <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-                <ul class="mobile-menu">
+                <ul class="mobile-menu" id="mobileMenu">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -43,66 +43,90 @@
                 <p>Linkage Consulting is a pro-bono consulting club run by students with real work experience...</p>
             </div>
         </section>
-        <section class="page-title">
-            <h1>About Linkage Consulting</h1>
-            <p>Linkage Consulting is a pro-bono consulting club run by students with real work experience...</p>
-        </section>
-        <section id="about" class="content-section">
+        <section class="about-content">
             <div class="about-container">
                 <div class="about-left">
-                    <h2>About Linkage Consulting</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula, justo at malesuada faucibus, ligula turpis luctus erat, a volutpat arcu sapien in orci. Fusce elementum ligula in urna interdum, ac ullamcorper ligula cursus.</p>
+                    <h2>Who We Are</h2>
+                    <p>Linkage Consulting is a pro-bono consulting club...</p>
                 </div>
                 <div class="about-right">
-                    <img src="images/apex_conference.png" alt="Team at the Apex Conference 2023">
-                    <p class="image-caption">APEX Conference 2022</p>
+                    <img src="images/apex_conference.png" alt="About Us Image">
+                    <p class="image-caption">Caption for the about image</p>
                 </div>
             </div>
         </section>
-        <section id="team" class="content-section team-section">
+        <section class="team-section">
             <h2>Meet the Team</h2>
+            <h3>Directors</h3>
             <div class="team-cards">
                 <div class="team-card">
-                    <h3>Ethan Gardiner</h3>
-                    <p class="team-role">Co-President</p>
-                    <img src="images/headshots/Ethan.png" alt="Ethan Gardiner">
-                    <p>Business Development @ Miovision</p>
+                    <img src="images/headshots/Ethan.png" alt="Ethan">
+                    <h3>Ethan</h3>
+                    <p class="team-role">Co-president</p>
+                    <p>Filler information about Kubera</p>
                 </div>
                 <div class="team-card">
-                    <h3>Max Landry</h3>
+                    <img src="images/headshots/Max.png" alt="Max">
+                    <h3>Max</h3>
                     <p class="team-role">Co-President</p>
-                    <img src="images/headshots/Max.png" alt="Max Landry">
-                    <p>Strategy Consultant @ Manulife</p>
+                    <p>Co-Founder</p>
                 </div>
                 <div class="team-card">
-                    <h3>Darrell Li</h3>
+                    <img src="images/headshots/Darrell_Li.png" alt="Darrell">
+                    <h3>Darrell</h3>
                     <p class="team-role">Director of Operations</p>
-                    <img src="images/headshots/Darrell_Li.png" alt="Darrell Li">
-                    <p>Technology Risk Consultant @ KPMG</p>
+                    <p>Co-Founder</p>
                 </div>
                 <div class="team-card">
-                    <h3>Jashan Dhir</h3>
-                    <p class="team-role">Director of Finance</p>
-                    <img src="images/headshots/Jashan.png" alt="Jashan Dhir">
-                    <p>Project Coordinator @ Blackberry</p>
-                </div>
-                <div class="team-card">
-                    <h3>Joshua Shiman</h3>
+                    <img src="images/headshots/Josh.png" alt="Joshua">
+                    <h3>Joshua</h3>
                     <p class="team-role">Director of Marketing</p>
-                    <img src="images/headshots/Josh.png" alt="Joshua Shiman">
-                    <p>Technical Writer @ IBM</p>
+                    <p>Filler information about Kubera</p>
                 </div>
                 <div class="team-card">
-                    <h3>Ajitesh Sharma</h3>
+                    <img src="images/headshots/Jashan.png" alt="Jashan">
+                    <h3>Jashan</h3>
+                    <p class="team-role">Director of Finance</p>
+                    <p>Filler information about Kubera</p>
+                </div>
+            </div>
+            <h3>Consultants</h3>
+            <div class="team-cards">
+                <div class="team-card">
+                    <img src="images/headshots/Sergej.png" alt="Sergej">
+                    <h3>Sergej Tanovic</h3>
+                    <p class="team-role">Senior Analyst</p>
+                    <p>Filler information about Kubera</p>
+                </div>
+            </div>
+            <h3>Analysts</h3>
+            <div class="team-cards">
+                <div class="team-card">
+                    <img src="images/headshots/Ajitesh.png" alt="Ajitesh">
+                    <h3>Ajitesh</h3>
                     <p class="team-role">Analyst</p>
-                    <img src="images/headshots/Ajitesh.png" alt="Ajitesh Sharma">
-                    <p>Sales and Operations @ LocalStudent</p>
+                    <p>Filler information about Kubera</p>
                 </div>
                 <div class="team-card">
-                    <h3>Jack McWatt</h3>
+                    <img src="images/headshots/Jack McWatt.png" alt="Jack">
+                    <h3>Jack</h3>
                     <p class="team-role">Analyst</p>
-                    <img src="images/headshots/Jack McWatt.png" alt="Jack McWatt">
-                    <p>Sales Analyst @ DriveAlert</p>
+                    <p>Filler information about Kubera</p>
+                </div>
+            </div>
+            <h3>Advisors</h3>
+            <div class="team-cards">
+                <div class="team-card">
+                    <img src="images/headshots/Kubera.png" alt="Kubera">
+                    <h3>Kubera Desai</h3>
+                    <p class="team-role">Advisor</p>
+                    <p>Filler information about Kubera</p>
+                </div>
+                <div class="team-card">
+                    <img src="images/headshots/Candace.png" alt="Candace">
+                    <h3>Candace Huntley</h3>
+                    <p class="team-role">Advisor</p>
+                    <p>Filler information about Candace</p>
                 </div>
             </div>
         </section>
