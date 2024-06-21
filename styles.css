@@ -14,15 +14,12 @@ body, html {
 
 /* Header styles */
 header {
-    background-color: #003366; /* Solid background color */
     color: white;
     padding: 1rem 0;
-    position: fixed; /* Fixed position */
+    position: relative; /* Make header relative */
     width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    transition: transform 0.5s ease-in-out;
+    z-index: 10; /* Ensure it's above other content */
+    background-color: #003366; /* Set the background color */
 }
 
 .header-container {
@@ -40,6 +37,11 @@ header {
 .logo-title h1 a {
     color: white;
     text-decoration: none;
+}
+
+.logo-img {
+    height: 50px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
 }
 
 /* Desktop menu styles */
@@ -92,9 +94,9 @@ nav ul.mobile-menu {
 nav ul.mobile-menu.show {
     display: flex;
     position: absolute;
-    top: 60px;
+    top: 70px;
     left: 0;
-    background-color: #003366;
+    background-color: rgba(0,51,102,0.8);
     width: 100%;
     padding: 10px 0;
     z-index: 9;
@@ -143,8 +145,7 @@ nav ul.mobile-menu li {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -6rem; /* Align with header */
-    padding-top: 6rem; /* Offset for fixed header */
+    margin-top: -6rem; /* Offset the content to overlap with header */
 }
 
 .title-section img {
@@ -172,10 +173,6 @@ nav ul.mobile-menu li {
     font-size: 1.2rem;
 }
 
-/* Main content styles */
-main {
-    padding-top: 6rem; /* Ensure content doesn't overlap with header */
-}
 
 section {
     margin-bottom: 2rem;
@@ -184,7 +181,7 @@ section {
 
 /* Hero section styles */
 #hero {
-    background-image: url('images/background.jpg');
+    background-image: url('images/headers/hero-background.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -195,27 +192,15 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: -6rem; /* Align with header */
     overflow: hidden;
+    margin-top: -6rem; /* Ensure it overlaps the navbar */
 }
 
-#hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 51, 102, 0.8); /* Darker overlay */
-    backdrop-filter: blur(5px);
-}
 
 .hero-content {
     position: relative;
-    z-index: 1;
     max-width: 90%; /* Ensure it doesn't cut off on smaller screens */
     margin: 0 auto; /* Center the content */
-    padding: 0 2rem; /* Add padding to avoid cutting off */
 }
 
 #hero h2 {
@@ -229,7 +214,7 @@ section {
 
 #hero .button {
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: 0.5rem 1rem;
     background-color: white;
     color: black;
@@ -249,7 +234,7 @@ section {
         padding-left: 2rem;
         padding-right: 2rem; /* Match the left padding */
         padding-top: 6rem; /* Add more top padding for mobile */
-        padding-bottom: 6rem; /* Add bottom padding for mobile */
+        padding-bottom: 4rem; /* Add bottom padding for mobile */
     }
 }
 
@@ -415,15 +400,6 @@ footer {
     }
 }
 
-/* Header visibility toggling */
-header.show {
-    transform: translateY(0);
-}
-
-header.hide {
-    transform: translateY(-100%);
-}
-
 /* About section styles */
 .about-container {
     display: flex;
@@ -464,11 +440,6 @@ header.hide {
 
     .about-right img {
         width: 100%;
-    }
-
-    .team-cards {
-        flex-direction: column;
-        align-items: center;
     }
 }
 
@@ -558,6 +529,9 @@ header.hide {
     width: 200px;
     padding: 1rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .contact-card img {
@@ -573,4 +547,16 @@ header.hide {
 
 .contact-card a:hover {
     text-decoration: underline;
+}
+
+/* Transparent header */
+.transparent-header {
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+/* Logo image styling */
+.logo-img {
+    height: 50px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
 }
