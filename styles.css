@@ -291,52 +291,54 @@ section {
     margin-bottom: 2rem;
 }
 
-/* Card container and card styles for the services page */
-.card-container {
+/* Carousel container */
+.carousel-container {
+    position: relative;
     display: flex;
-    justify-content: flex-start; /* Left justify the cards */
-    align-items: flex-start; /* Align items to the top */
-    flex-wrap: wrap;
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 1rem; /* Add padding to ensure content does not touch the edges */
-    max-width: 1200px; /* Constrain the maximum width */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
+/* Card container for horizontal scrolling */
+.card-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem;
+    margin: 0;
+}
+
+/* Individual card styles */
 .card {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Use full width on mobile */
-    max-width: 300px; /* Constrain the maximum width */
-    margin: 1rem;
+    width: 300px;
+    margin: 0 1rem; /* Add margin between cards */
     padding: 1rem;
     text-align: center;
-}
-
-@media (max-width: 768px) {
-    .card {
-        max-width: 100%; /* Ensure cards take full width on mobile */
-    }
-}
-
-.cards {
+    flex: 0 0 auto; /* Ensure cards don't shrink or grow */
     display: flex;
-    justify-content: center; /* Center the cards */
-    flex-wrap: wrap;
-    margin: 0 auto; /* Center the container */
-    max-width: 1200px; /* Constrain the maximum width */
+    flex-direction: column; /* Ensure card content stacks vertically */
+    justify-content: space-between; /* Space out content evenly */
 }
 
 .card img {
     width: 100%;
     height: auto;
     border-radius: 8px 8px 0 0;
+    max-height: 200px; /* Set a maximum height for images */
+    object-fit: cover; /* Ensure images cover the container while maintaining aspect ratio */
 }
 
 .card h3 {
     font-size: 1.5rem;
     margin: 1rem 0;
+    min-height: 3rem; /* Ensure minimum height for titles */
 }
 
 .card p {
@@ -357,6 +359,37 @@ section {
 
 .card a.button:hover {
     background-color: #ffcc00;
+}
+
+/* Scroll buttons */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-button.left {
+    left: 0;
+}
+
+.scroll-button.right {
+    right: 0;
+}
+
+.scroll-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+    .scroll-button {
+        padding: 0.5rem;
+    }
 }
 
 /* Footer styles */
