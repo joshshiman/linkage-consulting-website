@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function scrollLeft() {
     const container = document.querySelector('.card-container');
-    container.scrollBy({ left: -300, behavior: 'smooth' });
+    container.scrollBy({ left: -400, behavior: 'smooth' });
 }
 
 function scrollRight() {
     const container = document.querySelector('.card-container');
-    container.scrollBy({ left: 300, behavior: 'smooth' });
+    container.scrollBy({ left: 400, behavior: 'smooth' });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
