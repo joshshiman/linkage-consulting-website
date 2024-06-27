@@ -539,6 +539,23 @@ footer {
     color: black;
 }
 
+.linkedin-button {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: transparent;
+    border: none;
+}
+
+.linkedin-button img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.linkedin-button:hover img {
+    transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
     .team-cards {
         flex-direction: column;
