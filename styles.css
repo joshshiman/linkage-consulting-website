@@ -307,7 +307,7 @@ section {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding: 1rem;
+    padding: 0;
     margin: 0;
 }
 
@@ -392,6 +392,11 @@ section {
     }
 }
 
+/* Page title styling */
+.page-title {
+    margin-bottom: 1rem; /* Reduce the bottom margin */
+    padding-bottom: 1rem; /* Add padding if necessary */
+}
 /* Footer styles */
 footer {
     background-color: #001a33;
