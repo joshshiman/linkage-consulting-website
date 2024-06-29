@@ -448,6 +448,7 @@ footer {
 .about-left {
     flex: 1;
     padding-right: 2rem;
+    font-size: 18px;
 }
 
 .about-right {
